@@ -117,15 +117,6 @@ function getPasswordOptions() {
 
 }
 
-
-
-
-
-
-
-
-
-
 // Function for getting a random element from an array
 function getRandom(arr) {
   var randomIndex = Math.floor(Math.random() * arr.length);
@@ -138,36 +129,36 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-  var passwordCharacters = []
-  for (let i = 0; i <passwordLength; i++){
-    if( randomUppercaseLetter = getRandom(upperCasedCharacters)){
+  //var passwordCharacters = []
+  //for (let i = 0; i <passwordLength; i++){
+   // if( randomUppercaseLetter = getRandom(upperCasedCharacters)){
 
     
-    alert("please select uppercase letters")
-    passwordCharacters.push(randomUpperLetter)
-    generatePassword()
-  } else if(randomUppercaseLetter = getRandom(lowerCasedCharacters)){
-    alert("please select upperCase Characters")
-    passwordCharacters.push(randomCharacters)
-    generatePassword()
-  }
-  
-  var passwordString = passwordCharacters.join('')
-  return passwordString
-  
-}
-}
-
-
-  //var passwordCharacters = []
-
-  //for (let i = 0; i < passwordLength; i++) {
-  // var randomUppercaseLetter = getRandom(upperCasedCharacters)
-  // passwordCharacters.push(randomUppercaseLetter)
+    //alert("please select uppercase letters")
+    //passwordCharacters.push(randomUpperLetter)
+    //generatePassword()
+  //} else if(randomUppercaseLetter = getRandom(lowerCasedCharacters)){
+   // alert("please select upperCase Characters")
+    //passwordCharacters.push(randomCharacters)
+    //generatePassword()
   //}
+  
   //var passwordString = passwordCharacters.join('')
   //return passwordString
+  
 //}
+//}
+
+
+  var passwordCharacters = []
+
+  for (let i = 0; i < passwordLength; i++) {
+   var randomUppercaseLetter = getRandom(upperCasedCharacters)
+   passwordCharacters.push(randomUppercaseLetter)
+  }
+  var passwordString = passwordCharacters.join('')
+  return passwordString
+}
 
 
 //  for (let i = 0; i < passwordLength; i++) {

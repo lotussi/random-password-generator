@@ -6,7 +6,7 @@ This code generate a random password using uppercase characters, lowercase chara
 
 ## Installation
 screen shot
-
+screenshot_20230110_233410.png
 # Usage
 
 # License
