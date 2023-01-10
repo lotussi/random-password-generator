@@ -97,10 +97,11 @@ var hasSpecial;
 
 function getPasswordOptions() {
   passwordLength = prompt("Enter password length (minimum 10 characters, maximum 64 characters");
+  // validate password length
   if (isNaN(passwordLength)) {
     alert("please enter a number")
     getPasswordOptions()
-  }else if (passwordLength < 10) {
+  } else if (passwordLength < 10) {
     alert("password must be 10 or more characters")
     getPasswordOptions()
 
@@ -108,7 +109,7 @@ function getPasswordOptions() {
     alert("password must be less than or equal to 64 characters")
     getPasswordOptions()
   }
-
+  // Get character type options from user
   hasLowercase = confirm("password uses lowercase");
   hasUppercase = confirm("password uses uppercase");
   hasNumeric = confirm("password uses numeric");
@@ -137,26 +138,41 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+  var passwordCharacters = []
+  for (let i = 0; i <passwordLength; i++){
+    if( randomUppercaseLetter = getRandom(upperCasedCharacters)){
+
+    
+    alert("please select uppercase letters")
+    passwordCharacters.push(randomUpperLetter)
+    generatePassword()
+  } else if(randomUppercaseLetter = getRandom(lowerCasedCharacters)){
+    alert("please select upperCase Characters")
+    passwordCharacters.push(randomCharacters)
+    generatePassword()
+  }
   
- 
- 
+  var passwordString = passwordCharacters.join('')
+  return passwordString
   
- 
-  
- var passwordCharacters = []
-  
- for (let i = 0; i < passwordLength; i++) {
-    var randomUppercaseLetter = getRandom(upperCasedCharacters)
-    passwordCharacters.push(randomUppercaseLetter)
- }
-   var passwordString = passwordCharacters.join('')
-    return passwordString
+}
 }
 
-  
+
+  //var passwordCharacters = []
+
+  //for (let i = 0; i < passwordLength; i++) {
+  // var randomUppercaseLetter = getRandom(upperCasedCharacters)
+  // passwordCharacters.push(randomUppercaseLetter)
+  //}
+  //var passwordString = passwordCharacters.join('')
+  //return passwordString
+//}
+
+
 //  for (let i = 0; i < passwordLength; i++) {
- //   var passwordString = passwordCharacters.join('')
- //  return passwordString
+//   var passwordString = passwordCharacters.join('')
+//  return passwordString
 
 
 
@@ -168,7 +184,7 @@ var generateBtn = document.querySelector('#generate');
 
 
 function writePassword() {
-getPasswordOptions()
+  getPasswordOptions()
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
